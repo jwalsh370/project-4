@@ -10,46 +10,65 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Pizza Eata Pizzeria</h1>
+        <h1>Papi's Pizza</h1>
       </div>
-      <div class="pizzaSelector">
-        <div class="row">
-          <div class="col-md-4">
-            <p>
-                How many Small Pizzas would you like to purchase?
-            </p>
-            <select class="form-control" id="small">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+      <div class="row">
+        <div class="col-md-6">
+          <form class="pizzaPicker">
+            <select class="form-control" id="movieType">
+              <option value="default" selected>Select a Pizza below:</option>
+              <option value="Cheese">Cheese</option>
+              <option value="Pepperoni">Pepperoni</option>
+              <option value="Veggie">Veggie</option>
             </select>
+            <div class="pizzaTop">
+              <option class="btn btn-primary" value="3">Pepperoni</option>
+              <option class="btn btn-primary" value="3">Sausage</option>
+              <option class="btn btn-primary" value="1">Onions</option>
+              <option class="btn btn-primary" value="1">Hot Pepper</option>
+              <option class="btn btn-primary" value="2">Shallots</option>
+              <option class="btn btn-primary" value="2">Kale</option>
+              <option class="btn btn-primary" value="3">Ricotta</option>
+              <option class="btn btn-primary" value="2">Potato</option>
+            </div>
+            <div class="SizeSelector">
+              <p>
+                How many large pizzas would you like to purchase?
+              </p>
+              <select class="form-control" id="Large">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <p>
+                How many mediu Pizzas would you like to purchase?
+              </p>
+              <select class="form-control" id="medium">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <p>
+                How many small pizzas would you like to purchase?
+              </p>
+              <select class="form-control" id="small">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-warning">Pizza!</button>
+          </form>
           </div>
-          <div class="col-md-4">
-            <p>
-              How many medium Pizzas would you like to purchase?
-            </p>
-            <select class="form-control" id="medium">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
-          <div class="col-md-4">
-            <p>
-              How many ylarge pizzas would you like to purchase?
-            </p>
-            <select class="form-control" id="large">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
+        <div class="col-md-6">
+          <div id="pizzaTime">
+            <h2></h2>
         </div>
       </div>
     </div>
