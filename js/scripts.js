@@ -1,62 +1,50 @@
 //business logic
-debugger;
-function PizzaValue(amountValue, toppingValue) {
-  this.amountValue = amountvalue;
-  this.toppingValue = toppingValue;
+PizzaTime(size) {
+  this.size = size;
+  this.toppings= [];
 }
 
-  var toppingValue = 0;
-  var inputElements = document.getElementsByClassName('pizzaTop');
-  for(var i=0; inputElements[i]; ++i){
-        if(inputElements[i].checked){
-             toppingValue = inputElements[i].value;
+pizzaSize(){
+return this.size;
+}
 
-        }
+pizzaToppings(){
+return this.toppings;
+}
+
+newSize(size){
+  this.size=size;
+}
+
+newToppings(toppings){
+  this.toppings=toppings;
+}
+
+PizzaTime.prototype.pizzaPrice = function(){
+  var finalCost = 0;
+  if(this.size === "large"){
+    finalCost = 12;
+  } else if(this.size === "medium"){
+    finalCost = 8;
+  } else if(this.size === "small"){
+    finalCost = 6;
   }
+}
 
-  var amountValue = 0;
-  var inputElements = document.getElementsByClassName('sizeSelector');
-  for(var i=0; inputElements[i]; ++i){
-        if(inputElements[i].checked){
-             amountValue = inputElements[i].value;
-
-        }
+  if(this.toppings.length === 8){
+    finalCost = finalCost + 8;
+  }else if(this.toppings.length === 7){
+    finalCost = finalCost + 7;
+  }else if(this.toppings.length ===6){
+    finalCost = finalCost + 6;
+  }else if(this.toppings.length === 5){
+    finalCost = finalCost + 5;
+  }else if(this.toppings.length ===4){
+    finalCost = finalCost + 4;
+  }else if(this.toppings.length === 3){
+    finalCost = finalCost + 3;
+  }else if(this.toppings.length ===2){
+    finalCost = finalCost + 2;
+  }else if(this.toppings.length === 1){
+    finalCost = finalCost + 1;
   }
-  var pizzaTime = document.getElementById("pizzaTime")
-function clickCh(caller){
-if(caller.checked){
-add(caller)
-} else {
-subtract(caller)
-}
-}
-function add(caller){ total.value = total.value*1 + caller.value*1}
-function subtract(caller){ total.value = total.value*1 - caller.value*1}
-
-console.log(amountValue);
-console.log(toppingValue);
-console.log(PizzaValue);
- $(document).ready(function() {
-console.log(pizzaTime);
-
-// var selectedPizzaCount = 0;
-// var selectedPizzaType = "";
-//
-//
-//   $(".pizzaPicker").on("change keyup", function() {
-//     $("#totalCost").val(function() {
-//         var toppingVal = parseInt($(this).siblings(":checked").val());
-//         var countVal = parseInt($("#min").val()) || 0;
-//
-//         return toppingVal + countVal;
-//     });
-// });
-//
-//
-//
-  $("form.pizzaPicker").submit(function(event) {
-    event.preventDefault();
-//
-  });
-//
- });
