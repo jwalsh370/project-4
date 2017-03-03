@@ -15,52 +15,49 @@
       <div class="row">
         <div class="col-md-6">
           <form class="pizzaPicker">
-            <select class="form-control" id="movieType">
-              <option value="default" selected>Select a Pizza below:</option>
+            <select class="form-control" id="PizzaType">
+              <radio value="default" selected>Select a Pizza starter below:</option>
               <option value="Cheese">Cheese</option>
               <option value="Pepperoni">Pepperoni</option>
               <option value="Veggie">Veggie</option>
             </select>
-            <div class="pizzaTop">
-              <option class="btn btn-primary" value="3">Pepperoni</option>
-              <option class="btn btn-primary" value="3">Sausage</option>
-              <option class="btn btn-primary" value="1">Onions</option>
-              <option class="btn btn-primary" value="1">Hot Pepper</option>
-              <option class="btn btn-primary" value="2">Shallots</option>
-              <option class="btn btn-primary" value="2">Kale</option>
-              <option class="btn btn-primary" value="3">Ricotta</option>
-              <option class="btn btn-primary" value="2">Potato</option>
+          </br>
+            <div class="pizzaTop" id="toppings">
+              <input onclick="clickCh(this)" type="checkbox" value="3.00">Pepperoni
+              <input onclick="clickCh(this)" type="checkbox" value="3.00">Sausage
+              <input onclick="clickCh(this)" type="checkbox" value="1.00">Onions
+              <input onclick="clickCh(this)" type="checkbox" value="1.00">Hot Pepper
+              <input onclick="clickCh(this)" type="checkbox" value="2.00">Shallots
+              <input onclick="clickCh(this)" type="checkbox" value="2.00">Kale
+              <input onclick="clickCh(this)" type="checkbox" value="3.00">Ricotta
+              <input onclick="clickCh(this)" type="checkbox" value="2.00">Potato
             </div>
-            <div class="SizeSelector">
+          </br>
+            <div class="SizeSelector" id="size">
               <p>
                 How many large pizzas would you like to purchase?
               </p>
-              <select class="form-control" id="Large">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
+
+                <input onclick="clickCh(this)" type="checkbox" value="12.00" id="Large">1($12.00)
+                <input onclick="clickCh(this)" type="checkbox" value="24.00" id="Large">2
+                <input onclick="clickCh(this)"  type="checkbox" value="36.00" id="Large">3
+              <input onclick="clickCh(this)" type="checkbox" value="48.00"id="Large">4
               </select>
               <p>
-                How many mediu Pizzas would you like to purchase?
+                How many medium Pizzas would you like to purchase?
               </p>
-              <select class="form-control" id="medium">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
+                <input onclick="clickCh(this)" type="checkbox" id="medium" value="8.00">1($8.00)
+                <input onclick="clickCh(this)" type="checkbox" id="medium" value="16.00">2
+                <input onclick="clickCh(this)" type="checkbox" id="medium" value="24.00">3
+                <input onclick="clickCh(this)" type="checkbox" id="medium" value="32.00">4
               </select>
               <p>
                 How many small pizzas would you like to purchase?
               </p>
-              <select class="form-control" id="small">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
+                <input onclick="clickCh(this)" type="checkbox" value="6.00" id="small">1($6.00)
+                <input onclick="clickCh(this)" type="checkbox" value="12.00" id="small">2
+                <input onclick="clickCh(this)"  type="checkbox" value="18.00" id="small">3
+                <input onclick="clickCh(this)" type="checkbox" value="24.00" id="small">4
               </select>
             </div>
             <button type="submit" class="btn-warning">Pizza!</button>
@@ -69,6 +66,7 @@
         <div class="col-md-6">
           <div id="pizzaTime">
             <h2></h2>
+          
         </div>
       </div>
     </div>
