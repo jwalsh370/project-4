@@ -1,106 +1,35 @@
 
 // back end
+var finalCost = 0;
+var toppingPrice = 0;
+var pizzaSizePrice = 0;
 
-class PapiPizza{
-  constructor(pizzaSize, pizzaAmount) {
+function PapiPizza(pizzaSize) {
         this.pizzaToppings = [];
-        this.pizzaSize = pizzaSize;
-        this.pizzaAmount = PizzaAmount;
-  }
-
-  returnPizzaSize() {
-    return this.pizzaSize;
-  }
-
-  returnPizzaQuantity() {
-    return this.pizzaAmount;
-  }
-
-  returnpizzaToppings() {
-    return this.pizzaToppings;
-  }
-
-
-
-
-Pizza.prototype.calculatePizzaSizePrice = function(pizzaAmount) {
-  var finalCost = 0;
-
-  if (this.size === "small") {
-    finalCost = 8;
-  } else if (this.size === "large") {
-    finalCost = 16;
+        this.pizzaSize = 0;
 
   }
 
-  return finalCost * pizzaAmount;
+PapiPizza.prototype.calculateSize = function() {
+  if (this.pizzaSize === "small") {
+    pizzaSizePrice = 8;
+  } else if (this.pizzaSize === "large") {
+    pizzaSizePrice = 16;
+
+  }
+
+  return PizzaSizePrice;
 }
 
-Pizza.prototype.calculatePizzaToppingPrice = function() {
-  var finalCost = 0;
-  finalCost = this.pizzaToppings.length * 1;
+PapiPizza.prototype.calculateTopping = function() {
+  toppingPrice = this.pizzaToppings.length * 1;
+  return toppingPrice;
+}
+
+PapiPizza.prototype.calculateFinalPrice = function() {
+  finalCost = pizzaSizePrice + toppingPrice;
   return finalCost;
 }
 
+
 //front end
-
-$(function() {
-
-  var toppingsList = ["pick1", "pick2", "pick3", "pick4", "pick5", "pick6", "pick7", "pick8"];
-
-  var pizzaTop = [];
-  var finalCost = 0;
-  var pizzaAmount = 0;
-  var pizzaSize = "";
-
-  $("#pizzaPrice").click(function() {
-
-    pizzaTop = [];
-
-
-    toppingsList.forEach(function(slice) {
-      var checkedBox = ("#" + slice).toString();
-      var value = $(checkedBox).val();
-      var clicked = $(checkedBox).is(':checked');
-      if (clicked === true) {
-        pizzaTop.push(value);
-      }
-    });
-
-    pizzaAmount = $(".pizzaQuantity input[type='radio']:checked").val();
-
-    pizzaSize = $("#pizzaPizza input[type='radio']:checked").val();
-
-
-
-    var newPapiPizza= new Pizza(pizzaSize, pizzaAmount);
-
-    pizza.setPizzaToppings(pizzaTop);
-
-    finalCost = pizza.calculatePizzaSizeCost(pizza.pizzaAmount) + pizza.calculateToppingCost();
-
-    console.log(finalCost);
-
-    $(".total").text("Total Cost: $ " + finalCost);
-
-    $("h3.total").show();
-    $("#confirmPurchase").show();
-  });
-
-  $("#confirmPurchase").click(function() {
-
-    $(".ulToppings").empty();
-    $("#pizzaSize").text("Pizza Size: " + pizzaSize);
-    $(".pizzaQuantity").text("Amount: " + pizzaAmount);
-
-    for(i=0; i < pizzaTop.length; i++) {
-      var value = "";
-      if(pizzaTop[i] != "") {
-        value = pizzaTop[i];
-        $(".ulToppings").append("<li>" + value + "</li>");
-      }
-    }
-    $(".fnalPrice").text("Total Cost: $ " + finalCost);
-
-  });
-});
