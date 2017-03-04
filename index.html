@@ -1,75 +1,88 @@
+
+
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <title>Pizza</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"  type="text">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Pizza</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <div class="jumbotron">
-        <h1>Papi's Pizza</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <form name="pizzaPicker">
-            <select class="form-control" id="PizzaType">
-              <radio value="default" selected>Select a Pizza starter below:</option>
-              <option value="Cheese">Cheese</option>
-              <option value="Pepperoni">Pepperoni</option>
-              <option value="Veggie">Veggie</option>
-            </select>
-          </br>
-            <div class="pizzaTop" id="toppings">
-              <input type="checkbox" name="toppings value="3" onchange="pizzaTotal()"/>Pepperoni
-              <input type="checkbox" name="toppings value="3" onchange="pizzaTotal()"/>Sausage
-              <input type="checkbox" name="toppings value="1" onchange="pizzaTotal()"/>Onions
-              <input type="checkbox" name="toppings value="1" onchange="pizzaTotal()"/>Hot Pepper
-              <input type="checkbox" name="toppings value="2" onchange="pizzaTotal()"/>Shallots
-              <input type="checkbox" name="toppings value="2" onchange="pizzaTotal()"/>Kale
-              <input type="checkbox" name="toppings value="3" onchange="pizzaTotal()"/>Ricotta
-              <input type="checkbox" name="toppings value="2" onchange="pizzaTotal()"/>Potato
-            </div>
-          </br>
-            <div class="SizeSelector">
-              <p>
-                How many large pizzas would you like to purchase?
-              </p>
-
-                <input type="checkbox" name="size" value="12"onchange="pizzaTotal()">1($12.00)
-                <input type="checkbox" name="size" value="24"onchange="pizzaTotal()">2
-                <input type="checkbox" name="size" value="36"onchange="pizzaTotal()">3
-                <input type="checkbox" name="size" value="48"onchange="pizzaTotal()">4
-              </select>
-              <p>
-                <!-- How many medium Pizzas would you like to purchase?
-              </p>
-                <input onclick="clickCh(this)" type="checkbox" id="medium" value="8">1($8.00)
-                <input onclick="clickCh(this)" type="checkbox" id="medium" value="16">2
-                <input onclick="clickCh(this)" type="checkbox" id="medium" value="24">3
-                <input onclick="clickCh(this)" type="checkbox" id="medium" value="32">4
-              </select>
-              <p>
-                How many small pizzas would you like to purchase?
-              </p>
-                <input onclick="clickCh(this)" type="checkbox" value="6.00" id="small">1($6.00)
-                <input onclick="clickCh(this)" type="checkbox" value="12.00" id="small">2
-                <input onclick="clickCh(this)"  type="checkbox" value="18.00" id="small">3
-                <input onclick="clickCh(this)" type="checkbox" value="24.00" id="small">4
-              </select> -->
-            </div>
-            <button type="submit" class="btn-warning">Pizza!</button>
-            Total: <input type="text" size="2" name="total" value="0"/>
-          </form>
+        <div class="row">
+          <div class="col-md-6">
           </div>
-        <div class="col-md-6">
-          <div id="pizzaTime">
-            <h2></h2>
-
+          <div class="col-md-6">
+            <h1>Papi's Pizza</h1>
+          </div>
         </div>
       </div>
-    </div>
+        <div class="pizzaToppings">
+          <h2>Lets get Started!:</h2>
+          <p>Papi is very gourment, all topings are an extra 1 dollar.</p>
+          <form id="pizzaPizza">
+          <div class="row">
+            <div class="col-md-6">
+              <ul>
+                <li><input type="checkbox" id="pick1" value="pepperoni"> Pepperoni</li>
+                <li><input type="checkbox" id="pick2" value="sausage"> Sausage</li>
+                <li><input type="checkbox" id="pick3" value="onions"> Onion</li>
+              </ul>
+              <ul>
+                <li><input type="checkbox" id="pick4" value="shallot"> Shallot</li>
+                <li><input type="checkbox" id="pick5" value="Kale"> Kale</li>
+                <li><input type="checkbox" id="pick6" value="potato"> Potato</li>
+              </ul>
+            </div>
+              <ul>
+                <li><input type="checkbox" id="pick7" value="ricotta"> Ricotta</li>
+                <li><input type="checkbox" id="pick8" value="peppers"> Hot Cherry Pepper</li>
+              </ul>
+          </div>
+        </div>
+        <div class="Pizzasize">
+          <h2>Papi only does two Sizes:</h2>
+
+            <div class="col-md-3">
+                <p id="twoSize">
+                  <p><input type="radio" name="size" value="small" > Small ($8.00)</p>
+                  <p><input type="radio" name="size" value="large"> Large($16.00)</p>
+            </div>
+            <div class="col-md-3">
+              <div class="pizzaQuantity"
+                <h4>Papi sets know limit here, eat till you burst:</h4>
+                <ul id="pizzaList">
+                  <li><input type="radio" name="size" value="1" checked> 1</li>
+                  <li><input type="radio" name="size" value="2"> 2</li>
+                  <li><input type="radio" name="size" value="3"> 3</li>
+                  <li><input type="radio" name="size" value="4"> 4</li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="orderPizza">
+          <h4>Papi say's why wait? Push the button!</h4>
+            <button id="pizzaPrice" type="button" class="btn btn-warning">Pizza!</button>
+        </div>
+
+
+                    <ol>
+                      <li class="pizzaSize"></li>
+                      <li class="pizzaQuantity"></li>
+                      <li>Pizza Toppings:</li>
+                      <ol class="ulToppings">
+
+                      </ol>
+
+                      <li class="totalPrice"></li>
+                    </ol>
+                  </div>
+
+                      <li class="finalPrice"></li>
+                    </ul>
   </body>
 </html>
