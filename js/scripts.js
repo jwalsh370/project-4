@@ -24,7 +24,7 @@ class PapiPizza{
 
 
 Pizza.prototype.calculatePizzaSizePrice = function(pizzaAmount) {
-  var Cost = 0;
+  var finalCost = 0;
 
   if (this.size === "small") {
     finalCost = 8;
@@ -67,7 +67,7 @@ $(function() {
       }
     });
 
-    pizzaAmount = $("#quantityForm input[type='radio']:checked").val();
+    pizzaAmount = $(".pizzaQuantity input[type='radio']:checked").val();
 
     pizzaSize = $("#pizzaPizza input[type='radio']:checked").val();
 
@@ -91,7 +91,7 @@ $(function() {
 
     $(".ulToppings").empty();
     $("#pizzaSize").text("Pizza Size: " + pizzaSize);
-    $("#pizzaQuantity").text("Amount: " + pizzaAmount);
+    $(".pizzaQuantity").text("Amount: " + pizzaAmount);
 
     for(i=0; i < pizzaTop.length; i++) {
       var value = "";
@@ -100,16 +100,7 @@ $(function() {
         $(".ulToppings").append("<li>" + value + "</li>");
       }
     }
-    $("#totalPrice").text("Total Cost: $ " + finalCost);
+    $(".fnalPrice").text("Total Cost: $ " + finalCost);
 
   });
 });
-
-
-
-
-
-
-
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
