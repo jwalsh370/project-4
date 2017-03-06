@@ -26,10 +26,27 @@ PapiPizza.prototype.calculateTopping = function() {
   return toppingPrice;
 }
 
-PapiPizza.prototype.calculateFinalPrice = function() {
+PapiPizza.prototype.calculatefinalPrice = function() {
   finalCost = pizzaSizePrice + toppingPrice;
   return finalCost;
 }
-
-
 //front end
+
+
+  $("form#papiOrder").submit(function(event) {
+   event.preventDefault();
+   debugger;
+   var pizzaSize = $("input:radio[name=size]:checked").val();
+
+   var pizzaToppings = $("input:checkbox[name=pizzaTops]:checked").map(function() {
+     return $(this).val();
+   }).get();
+   pizza = new PapiPizza (pizzaSize, pizzaToppings);
+    pizaSize= PapiPizza.prototype.calculateSize();
+   pizzaTops = Pizza.prototype.calculateTopping();
+   finalPizza = Pizza.prototype.calculatefinalPrice();
+   $("#basePrice").html(priceOne);
+   $("#toppingPrice").html(priceTwo);
+   $("#finalPrice").html(priceThree);
+
+ });
