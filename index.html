@@ -24,14 +24,14 @@
          <h5>Choose a pizza size.</h5>
          <div class="radio">
            <label>
-             <input type="radio" name="size" value="8">
+             <input type="radio" name="size" value="8.00">
              Small = $8.00
            </label>
          </div>
 
          <div class="radio">
            <label>
-             <input type="radio" name="size" value="16">
+             <input type="radio" name="size" value="16.00">
              Large = $16.00
            </label>
            </div></br>
@@ -48,31 +48,31 @@
 
            <div class="checkbox">
              <label>
-               <input id="top1" type="checkbox" name="pizzaTops" value="3">
+               <input id="top1" type="checkbox" name="pizzaTops" value="pepperoni">
                Pepperoni
              </label>
            </div>
            <div class="checkbox">
              <label>
-               <input  id="top2" type="checkbox" name="pizzaTops" value="3">
+               <input  id="top2" type="checkbox" name="pizzaTops" value="sausage">
                Sausage
              </label>
            </div>
            <div class="checkbox">
              <label>
-               <input id="top3" type="checkbox" name="pizzaTops" value="1">
+               <input id="top3" type="checkbox" name="pizzaTops" value="onions">
                Onions
              </label>
            </div>
            <div class="checkbox">
              <label>
-               <input type="checkbox" name="pizzaTops" value="1">
+               <input type="checkbox" name="pizzaTops" value="olives">
                Olives
              </label>
            </div>
            <div class="checkbox">
              <label>
-               <input type="checkbox" name="pizzaTops" value="2">
+               <input type="checkbox" name="pizzaTops" value="kale">
                Kale
              </label>
              </div></br>
@@ -87,9 +87,12 @@
              <h3 class="panel-title">3. Submit Your Papi Pizza Order</h3>
            </div>
            <div class="panel-body">
-             <p>Base Price: $<span id="sizePrice"></span>.00</p>
-             <p>Topping Price: $<span id="toppingPrice"></span>.00</p>
-             <p>Total Price: $<span id="finalPrice"></span>.00</p>
+
+           <div id ="toppingOutput">
+             <p>Enjoy these delicious toppings straight from the Papi garden:</p></br>
+           </div></br>
+           <div id="pizzaOutput">
+           </div></br>
            </div>
          </div>
        </div>
