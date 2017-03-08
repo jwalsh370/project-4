@@ -1,0 +1,16 @@
+.jumbotron {
+  text-align: center;
+  background-color: #FDF3E7;
+}
+
+body {
+  background-color: #C63D0F;
+}
+
+.panelHead{
+  color: #3B3738;
+}
+
+#papi{
+  display: none;
+}

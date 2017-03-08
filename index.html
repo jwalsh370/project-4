@@ -17,65 +17,100 @@
       <div class="col-md-4">
         <div class="panel panel-default  panel-info" id="size">
           <div class="panel-heading">
-            <h3 class="panel-title">1. Choose Your Size</h3>
+            <h3 class="panelHead" class="panel-title">1. Choose Your Size</h3>
           </div>
           <div class="panel-body">
             <form id="papiOrder">
-              <h5>Choose a pizza size.</h5>
+              <h3 class="panelHead"></h3>
               <div class="radio">
                 <label>
-                  <input type="radio" name="size" value="8.00">
+                  <input type="radio" name="size" value="8">
                   Small = $8.00
                 </label>
               </div>
-
               <div class="radio">
                 <label>
-                  <input type="radio" name="size" value="16.00">
+                  <input type="radio" name="size" value="12">
+                  Medium = $12.00
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="16">
                   Large = $16.00
                 </label>
-              </div></br>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="20">
+                  Extra Large = $20.00
+                </label>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="panel panel-default  panel-warning" id="chooseTopping">
             <div class="panel-heading">
-              <h3>2. Choose Your Toppings</h3>
+              <h3 class="panelHead">2. Choose Your Toppings</h3>
             </div>
             <div class="panel-body">
               <h5> Papi only uses the most gourmet Toppings. Eat your fill.</h5>
 
               <div class="checkbox">
                 <label>
-                  <input id="top1" type="checkbox" name="pizzaTops" value="pepperoni">
+                  <input id="top1" type="checkbox" name="pizzaTops" value="Pepperoni">
                   Pepperoni
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input  id="top2" type="checkbox" name="pizzaTops" value="sausage">
+                  <input  id="top2" type="checkbox" name="pizzaTops" value="Sausage">
                   Sausage
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input id="top3" type="checkbox" name="pizzaTops" value="onions">
+                  <input id="top3" type="checkbox" name="pizzaTops" value="Onions">
                   Onions
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" name="pizzaTops" value="olives">
+                  <input type="checkbox" name="pizzaTops" value="Olives">
                   Olives
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" name="pizzaTops" value="kale">
+                  <input type="checkbox" name="pizzaTops" value="Kale">
                   Kale
                 </label>
-              </div></br>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input  type="checkbox" name="pizzaTops" value="Potato">
+                  Potato
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input  type="checkbox" name="pizzaTops" value="Hot Peppers">
+                  Hot Pepper
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="pizzaTops" value="Ricotta">
+                  Ricotta
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input id="top1" type="checkbox" name="pizzaTops" value="Basil">
+                  Basil
+                </label>
+              </div>
               <button id="submitButton" type="submit" class="btn btn-warning">Pizza!</button>
             </form>
           </div>
@@ -84,12 +119,13 @@
       <div class="col-md-4">
         <div class="panel panel-default  panel-warning" id="confirmation">
           <div class="panel-heading">
-            <h3 class="panel-title">3. Submit Your Papi Pizza Order</h3>
+            <h3 class="panelHead">3. Submit Your Papi Pizza Order</h3>
           </div>
           <div class="panel-body">
             <div id ="toppingOutput">
               <p>Enjoy these delicious toppings straight from the Papi garden:</p></br>
             </div></br>
+            <h3 id="papi">Thank you for choosing Papi!</h3>
             <div id="pizzaOutput">
             </div></br>
           </div>
