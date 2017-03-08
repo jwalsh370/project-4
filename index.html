@@ -24,14 +24,14 @@
          <h5>Choose a pizza size.</h5>
          <div class="radio">
            <label>
-             <input type="radio" name="size" value="Small">
+             <input type="radio" name="size" value="8">
              Small = $8.00
            </label>
          </div>
 
          <div class="radio">
            <label>
-             <input type="radio" name="size" value="Large">
+             <input type="radio" name="size" value="16">
              Large = $16.00
            </label>
            </div></br>
@@ -44,35 +44,35 @@
              <h3>2. Choose Your Toppings</h3>
            </div>
          <div class="panel-body">
-             <h5> Papi uses gourmet Toppings therefore, they are $1.00 each. Eat your fill.</h5>
+             <h5> Papi only uses the most gourmet Toppings. Eat your fill.</h5>
 
            <div class="checkbox">
              <label>
-               <input type="checkbox" name="pizzaTops" value="Pepperoni">
+               <input id="top1" type="checkbox" name="pizzaTops" value="3">
                Pepperoni
              </label>
            </div>
            <div class="checkbox">
              <label>
-               <input type="checkbox" name="pizzaTops" value="Sausage">
+               <input  id="top2" type="checkbox" name="pizzaTops" value="3">
                Sausage
              </label>
            </div>
            <div class="checkbox">
              <label>
-               <input type="checkbox" name="pizzaTops" value="Onions">
+               <input id="top3" type="checkbox" name="pizzaTops" value="1">
                Onions
              </label>
            </div>
            <div class="checkbox">
              <label>
-               <input type="checkbox" name="pizzaTops" value="olives">
+               <input type="checkbox" name="pizzaTops" value="1">
                Olives
              </label>
            </div>
            <div class="checkbox">
              <label>
-               <input type="checkbox" name="pizzaTops" value="Kale">
+               <input type="checkbox" name="pizzaTops" value="2">
                Kale
              </label>
              </div></br>
@@ -90,7 +90,6 @@
              <p>Base Price: $<span id="sizePrice"></span>.00</p>
              <p>Topping Price: $<span id="toppingPrice"></span>.00</p>
              <p>Total Price: $<span id="finalPrice"></span>.00</p>
-             <button type="button" class="btn btn-danger">Confirm</button>
            </div>
          </div>
        </div>
